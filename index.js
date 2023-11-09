@@ -14,6 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 dbConnection()
 
 //Routes
+app.get('/',(req,res)=>{
+   res.status(200).json({
+    message : "Welcome to imagin-backend"
+   }) 
+})
 app.use('/api/user',require('./routes/user.js'));
 app.use('/api/post',require('./routes/post.js'));
 
