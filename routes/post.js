@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { sharePost, fetchPost } = require('../functions/postFunctions')
+const { savePost, fetchPost, sharePost } = require('../functions/postFunctions')
 
-router.get('/share',sharePost)
-router.post('/fetch',fetchPost)
+router.post('/save',savePost)
+router.post('/share',sharePost)
+router.get('/fetch',fetchPost)
 
 module.exports = router

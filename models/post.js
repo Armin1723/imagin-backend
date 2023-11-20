@@ -13,11 +13,16 @@ const postSchema = new mongoose.Schema({
         type : String,
         required : true
     },
-    firstName : {
+    username : {
         type : String,
         required : true
+    },
+    shared :{
+        type: Boolean,
+        default : false
     }
 })
 
-const Post = new mongoose.model('Post', postSchema)
+const Post = mongoose.model('Post', postSchema)
+
 module.exports = Post
