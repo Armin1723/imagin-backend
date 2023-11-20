@@ -17,7 +17,7 @@ const sendMail = async (username, email, id) =>{
             from : 'letsimagin.handler@gmail.com',
             to : email,
             subject : "Verification mail for iMAGIN",
-            html : '<p>Hi '+username+' welcome to iMAGIN. As last part of the verification step kindly click on <a href="http://localhost:8000/api/user/verify?id='+id+'">here</a>'
+            html : '<p>Hi '+username+' welcome to iMAGIN. As last part of the verification step kindly click on <a href="https://imagin-backend.onrender.com/api/user/verify?id='+id+'">here</a>'
         }
     
         transporter.sendMail(mailOptions, function(error, info){
