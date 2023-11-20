@@ -65,7 +65,7 @@ const signup = async (req,res) =>{
 const verifyMail = async ( req, res ) =>{
     try {
         const updateInfo = await User.updateOne({_id : req.query.id},{$set : {emailVerified : true}})
-        res.redirect('http://www.letsimagin.netlify.app')
+        res.redirect('https://imagin-backend.onrender.com')
     } catch (error) {
         res.status(500).json({error:"Error Occured" })
     }
